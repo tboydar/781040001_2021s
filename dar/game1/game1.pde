@@ -11,17 +11,18 @@ int foodColor = 255;
 //Direct state = Direct.Up;
 
 void setup() {
-  frameRate(1000);
+  frameRate(30);
   size(800, 800);
   //println(state);
-  fx = (int)random(60, width-60);
-  fy = (int)random(60, height-60);
+  foodRandom();
   x = width/2;
   y = height/2;
   background(0);
+  textSize(32);
 }
 
 void draw() {
+  background(0);
   fill(0, 255, 0);
   rect(x, y, 30, 30);
   fill(foodColor, 0, 0);
@@ -30,6 +31,8 @@ void draw() {
   line (fx, 0, fx, height);
   line (0, fy, width, fy);
   stroke(0);
-
+  
+  drawLen();
   move();
+  dashboard();
 }
