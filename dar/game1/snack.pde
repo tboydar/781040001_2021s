@@ -1,3 +1,14 @@
+long foodTimer = 0;
+
+void checkEat() {
+  if (x > fx && x < fx+50  && y > fy && y < fy + 50) {
+    foodColor = 100;
+    foodTimer = millis();
+  }
+  if (foodColor == 100 & millis()-foodTimer > 1000) {
+    foodColor = 255;
+  }
+}
 void move() {
   if (direct =="up") y--;
   if (direct =="down") y++;
@@ -12,6 +23,7 @@ void move() {
     x = width+30;
   if (x> width+30)  // right
     x = 0-30;
+  checkEat();
 }
 void keyPressed() {
   println(key);  
