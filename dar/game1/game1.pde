@@ -31,7 +31,7 @@ void draw() {
   line (fx, 0, fx, height);
   line (0, fy, width, fy);
   stroke(0);
-  
+
   drawLen();
   move();
   dashboard();
