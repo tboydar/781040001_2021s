@@ -4,6 +4,6 @@ void foodRandom() {
 }
 
 void drawFood() {
-  fill(foodColor, 0,0);
+  fill(0, foodColor, 0);
   rect(fx, fy, 50, 50);
 }
